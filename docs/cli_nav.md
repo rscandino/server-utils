@@ -7,17 +7,31 @@ It's a powerful tool for quickly understanding the organization of files and sub
 
 Running `tree` in a directory will display its contents recursively. Beyond this core function, tree offers a wide range of options (retrievable with `tree --help`) to customize its output, including:
 
-* *File and Directory Listing*: The core function of tree is to list files and directories. It can be configured to show all files (`-a`), only directories (`-d`), or to follow symbolic links (`-l`). You can also specify the depth of the listing with -L and filter the output using include (`-P`) and exclude (`-I`) patterns. It can even respect .gitignore files (`--gitignore`).
-* *File Information Display*: tree can show a wealth of metadata for each file. This includes permissions (`-p`), user and group ownership (`-u, -g`), file size (`in bytes -s or human-readable format -h`), modification or status change dates (`-D`), and inode numbers (`--inodes`).
-* *Output Formatting and Sorting*: The output can be customized to be more visually appealing or useful. You can remove the indentation lines (`-i`), force colorization (`-C`), and append indicators like / or * to file names (`-F`). The output can also be sorted in various ways, including by name (`default`), modification time (`-t`), size (`--sort=size`), or unsorted (`-U`), with the option to reverse the sort order (`-r`).
-* *Output to Other Formats*: Beyond the standard terminal output, tree has robust capabilities for generating output in machine-readable and web-friendly formats. It can produce XML (`-X`), JSON (`-J`), and HTML (`-H`) representations of the directory structure. This makes it a powerful tool for scripting, data analysis, and web documentation.
-* *Input and Miscellaneous*: tree can also read paths from a file (`--fromfile`), and it provides options for specifying the character set (`--charset`), turning off the file count report (`--noreport`), and handling non-printable characters. It also supports creating terminal hyperlinks with the --hyperlink flag.
+1. **Listing & Filtering**:
+
+    * *Control what is shown*: Display all files (-a), only directories (-d), or respect .gitignore files (--gitignore).
+    * *Filter by patterns*: Include (-P) or exclude (-I) files and directories that match a specific pattern.
+    * *Limit depth*: Restrict the output to a specific number of directory levels (-L).
+
+2. **Information Display**: Show permissions (-p), owner/group (-u, -g), size (-s, -h), and modification dates (-D).
+
+3. **Sorting & Ordering**:
+
+    * *Sort options*: Order the output by name (default), modification time (-t), size (--sort=size), or other criteria.
+    * *Customization*: Reverse the sort order (-r) or list directories before files (--dirsfirst).
+
+4. **Output Formats**:
+
+    * *Standard output*: Prints a visual tree to the console.
+    * *Machine-readable formats*: Export the tree as JSON (-J), XML (-X), or HTML (-H).
+    * *File output*: Redirect the output to a file instead of the terminal (-o).
+
 
 ## Zoxide
 [zoxide](https://github.com/ajeetdsouza/zoxide.git) is a smarter `cd` command. It remembers which directories you use most frequently, so you can "jump" to them in just a few keystrokes.
 
 ### Init
-To fully work `zoxide` should be initialize on your `~/.bashrc`. Just add the following line:
+To fully work `zoxide` should be initialized in your `~/.bashrc`. Just add the following line:
 
 ```shell
 eval "$(zoxide init bash)"
