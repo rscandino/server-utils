@@ -1,7 +1,7 @@
-# CLI Navigation Tools
+# :rocket: CLI Navigation Tools
 Useful tools to navigate and interact with the filesystem through command line.
 
-## Tree
+## :deciduous_tree: Tree
 The package `tree` provides a visual representation of a directory's contents in a tree-like format.
 It's a powerful tool for quickly understanding the organization of files and subdirectories.
 
@@ -20,7 +20,7 @@ Running `tree` in a directory will display its contents recursively. Beyond this
 4. **Output Formats**: Export the tree as JSON (`-J`), XML (`-X`), or HTML (`-H`).
 
 
-## Zoxide
+## :rabbit: Zoxide
 [zoxide](https://github.com/ajeetdsouza/zoxide.git) is a smarter `cd` command. It remembers which directories you use most frequently, so you can "jump" to them in just a few keystrokes.
 
 ### Init
@@ -45,7 +45,9 @@ z foo/             # cd into relative path
 z ..               # cd one level up
 z -                # cd into previous directory
 
-zi                 # toggle interactive selection (using fzf)
+zi                 # toggle interactive fuzzy selection (using fzf)
 ```
 
-## Fzf
+## :mag_right: Fzf
+
+

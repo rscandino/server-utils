@@ -1,4 +1,4 @@
-# SSH - Secure SHell
+# :closed_lock_with_key: SSH - Secure SHell
 Is a cryptographic network protocol used to securely operate network services, in particular for secure remote login and command-line execution,
 providing an encrypted channel between a client and a server. 
 This protects against eavesdropping, interception, and other attacks.
@@ -13,7 +13,7 @@ ssh
 ```
 More information about `ssh` and all its commands can be found [here](https://www.ssh.com/academy/ssh/command).
 
-## 🔐 Access and Setup
+## Access and Setup
 Two main way of authenticate exists when using ssh:
 
 - **Password** Authentication: The simplest method, where you use a username and password to log in. This is less secure as passwords can be vulnerable to interception or brute-force attacks.
