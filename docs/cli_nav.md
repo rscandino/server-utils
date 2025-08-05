@@ -5,26 +5,19 @@ Useful tools to navigate and interact with the filesystem through command line.
 The package `tree` provides a visual representation of a directory's contents in a tree-like format.
 It's a powerful tool for quickly understanding the organization of files and subdirectories.
 
-Running `tree` in a directory will display its contents recursively. Beyond this core function, tree offers a wide range of options (retrievable with `tree --help`) to customize its output, including:
+Running `tree` in a directory will display its contents recursively. Beyond this core function, `tree` offers a wide range of options (retrievable with `tree --help`) to customize its output, including:
 
 1. **Listing & Filtering**:
 
-    * *Control what is shown*: Display all files (-a), only directories (-d), or respect .gitignore files (--gitignore).
-    * *Filter by patterns*: Include (-P) or exclude (-I) files and directories that match a specific pattern.
-    * *Limit depth*: Restrict the output to a specific number of directory levels (-L).
+    * *Control what is shown*: Display all files (`-a`), only directories (`-d`), or respect .gitignore files (`--gitignore`).
+    * *Filter by patterns*: Include (`-P`) or exclude (`-I`) files and directories that match a specific pattern.
+    * *Limit depth*: Restrict the output to a specific number of directory levels (`-L`).
 
-2. **Information Display**: Show permissions (-p), owner/group (-u, -g), size (-s, -h), and modification dates (-D).
+2. **Information Display**: Show permissions (`-p`), owner/group (`-u, -g`), size (`-s, -h`), and modification dates (`-D`).
 
-3. **Sorting & Ordering**:
+3. **Sorting & Ordering**: Order and sort the output by name, modification time (`-t`), size (`--sort=size`), or other criteria.
 
-    * *Sort options*: Order the output by name (default), modification time (-t), size (--sort=size), or other criteria.
-    * *Customization*: Reverse the sort order (-r) or list directories before files (--dirsfirst).
-
-4. **Output Formats**:
-
-    * *Standard output*: Prints a visual tree to the console.
-    * *Machine-readable formats*: Export the tree as JSON (-J), XML (-X), or HTML (-H).
-    * *File output*: Redirect the output to a file instead of the terminal (-o).
+4. **Output Formats**: Export the tree as JSON (`-J`), XML (`-X`), or HTML (`-H`).
 
 
 ## Zoxide
