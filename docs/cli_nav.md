@@ -24,7 +24,7 @@ eval "$(zoxide init bash)"
 ```
 
 ### Usage
-:Important: Untill you enter into a directory it will not be memorized by `zoxide`.
+:bangbang: Untill you enter into a directory it will not be memorized by `zoxide`.
 It can be used in the same way of `cd`.
 Here are the basic commands of `zoxide`:
 
