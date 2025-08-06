@@ -1,6 +1,11 @@
 # :rocket: File System Navigation Tools
 Useful tools to navigate and interact with the filesystem through command line.
 
+1. [tree](## :deciduous_tree: Tree)
+2. [zoxide](## :rabbit: Zoxide)
+3. [ripgrep](## :crystal_ball: Ripgrep)
+3. [fzf](## :mag_right: Fzf)
+
 ## :deciduous_tree: Tree
 The package `tree` provides a visual representation of a directory's contents in a tree-like format.
 It's a powerful tool for quickly understanding the organization of files and subdirectories.
@@ -18,6 +23,14 @@ Running `tree` in a directory will display its contents recursively. Beyond this
 3. **Sorting & Ordering**: Order and sort the output by name, modification time (`-t`), size (`--sort=size`), or other criteria.
 
 4. **Output Formats**: Export the tree as JSON (`-J`), XML (`-X`), or HTML (`-H`).
+
+```shell
+# Some examples
+tree                        # displays files and dirs (recursively) of current directory
+tree -d                     # displays dirs only (recursively) of current directory
+tree Documents/             # displays files and dirs of directory Documents
+tree -h                     # displays file size (human readable) of current directory
+```
 
 
 ## :rabbit: Zoxide
@@ -56,6 +69,13 @@ By default, ripgrep will respect gitignore rules and automatically skip hidden f
 
 It is a faster and more powerfull version of `grep`. Just type `rg` followed by the pattern you are looking for. Several flags are availabe just look at the manual or the [repo](https://github.com/BurntSushi/ripgrep.git).
 
+```shell
+# Some examples
+rg lol                          # looks for pattern 'lol' in all the files present in current dir
+rg lol README.md                # looks for pattern 'lol' in file README.md
+rg '[A-Za-z]{30}' README.md     # looks for regex '[A-Za-z]{30}' in file README.md
+
+```
 ## :mag_right: Fzf
 General-purpose command-line fuzzy finder. It's an interactive **filter program** for any kind of list; files, command history, processes, hostnames, bookmarks, git commits, etc.
 It implements a "fuzzy" matching algorithm, so you can quickly type in patterns with omitted characters and still get the results you want.
