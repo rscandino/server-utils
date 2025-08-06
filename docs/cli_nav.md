@@ -30,6 +30,8 @@ To fully work `zoxide` should be initialized in your `~/.bashrc`. Just add the f
 eval "$(zoxide init bash)"
 ```
 
+Remeber to `source ~/.bashrc` after.
+
 ### Usage
 :bangbang: Untill you enter into a directory it will not be memorized by `zoxide`.
 It can be used in the same way of `cd`.
@@ -48,7 +50,11 @@ z -                # cd into previous directory
 zi                 # toggle interactive selection (using fzf)
 ```
 
-## :: Ripgrep
+## :crystal_ball: Ripgrep
+[ripgrep](https://github.com/BurntSushi/ripgrep.git) is a line-oriented search tool that recursively searches the current directory for a regex pattern.
+By default, ripgrep will respect gitignore rules and automatically skip hidden files/directories and binary files.
+
+It is a faster and more powerfull version of `grep`. Just type `rg` followed by the pattern you are looking for. Several flags are availabe just look at the manual or the [repo](https://github.com/BurntSushi/ripgrep.git).
 
 ## :mag_right: Fzf
 General-purpose command-line fuzzy finder. It's an interactive **filter program** for any kind of list; files, command history, processes, hostnames, bookmarks, git commits, etc.
@@ -57,15 +63,15 @@ It implements a "fuzzy" matching algorithm, so you can quickly type in patterns 
 The basic usage of `fzf` is indeed to be added at the and of a command generating a list/search/selection. It matches nicely with other tools such as `find`, `ripgrep`, `fd-find`, but it can be also be paired with text editors etc.:
 
 ```shell
-find * -type f | fzf        # fuzzy find selection of files of the 'find' tool
 rg <pattern> | fzf          # fuzzy find selection of 'ripgrep' serach of <pattern>
+find * -type f | fzf        # fuzzy find selection of files of the 'find' tool
 ls | fzf                    # fuzzy find 'ls' results
 vim $(fzf)                  # Open selection of fzf (as a bash variable) into 'vim'
 ```
 
 It can also be matched with tmux and its configuration and many other tools, check directly the [repo](https://github.com/junegunn/fzf.git).
 
-### Fuzzy completition for bash
+### Fuzzy completition for bash (Simplest usage!)
 `fzf` is be included by default for **autocomplete** using the command `**` followd by pressing `<TAB>` key:
 
 ```shell
