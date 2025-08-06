@@ -1,4 +1,4 @@
-# :rocket: CLI Navigation Tools
+# :rocket: File System Navigation Tools
 Useful tools to navigate and interact with the filesystem through command line.
 
 ## :deciduous_tree: Tree
@@ -45,9 +45,51 @@ z foo/             # cd into relative path
 z ..               # cd one level up
 z -                # cd into previous directory
 
-zi                 # toggle interactive fuzzy selection (using fzf)
+zi                 # toggle interactive selection (using fzf)
 ```
 
+## :: Ripgrep
+
 ## :mag_right: Fzf
+General-purpose command-line fuzzy finder. It's an interactive **filter program** for any kind of list; files, command history, processes, hostnames, bookmarks, git commits, etc.
+It implements a "fuzzy" matching algorithm, so you can quickly type in patterns with omitted characters and still get the results you want.
 
+The basic usage of `fzf` is indeed to be added at the and of a command generating a list/search/selection. It matches nicely with other tools such as `find`, `ripgrep`, `fd-find`, but it can be also be paired with text editors etc.:
 
+```shell
+find * -type f | fzf        # fuzzy find selection of files of the 'find' tool
+rg <pattern> | fzf          # fuzzy find selection of 'ripgrep' serach of <pattern>
+ls | fzf                    # fuzzy find 'ls' results
+vim $(fzf)                  # Open selection of fzf (as a bash variable) into 'vim'
+```
+
+It can also be matched with tmux and its configuration and many other tools, check directly the [repo](https://github.com/junegunn/fzf.git).
+
+### Fuzzy completition for bash
+`fzf` is be included by default for **autocomplete** using the command `**` followd by pressing `<TAB>` key:
+
+```shell
+vim **<TAB>                     # fuzzy autocomplete
+vim Documents/**<TAB>           # fuzzy autocomplete inside Documents dir
+cd **<TAB>                      # Another example of fuzzy autocomplete
+```
+
+### Customize command
+`fzf` has different flags that can be used to customize its usage, for example:
+
+```shell
+ls | fzf --preview "cat {}"                              # display preview of the selection using 'cat'
+ls | fzf --preview "batcat -n --color=always {}"         # display preview of the selection using 'bat' and colors
+```
+
+You can also assign these specific extensions of fzf to keybinds such as `ctrl-t`:
+
+```shell
+# Preview file content using bat (https://github.com/sharkdp/bat)
+export FZF_CTRL_T_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+```
+
+All customizations can be made permanent by setting export variables into your `~/.bashrc` file. Check the [repo](https://github.com/junegunn/fzf.git) for more.
