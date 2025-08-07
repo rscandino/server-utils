@@ -4,10 +4,9 @@ Useful tools to navigate and interact with the filesystem through command line.
 1. [tree](##Tree)
 2. [zoxide](##Zoxide)
 3. [ripgrep](##Ripgrep)
-4. [fzf](##Fzf)
+3. [fzf](##Fzf)
 
----
-## Tree
+## :deciduous_tree: Tree
 The package `tree` provides a visual representation of a directory's contents in a tree-like format.
 It's a powerful tool for quickly understanding the organization of files and subdirectories.
 
@@ -33,8 +32,8 @@ tree Documents/             # displays files and dirs of directory Documents
 tree -h                     # displays file size (human readable) of current directory
 ```
 
----
-## Zoxide
+
+## :rabbit: Zoxide
 [zoxide](https://github.com/ajeetdsouza/zoxide.git) is a smarter `cd` command. It remembers which directories you use most frequently, so you can "jump" to them in just a few keystrokes.
 
 ### Init
@@ -64,8 +63,7 @@ z -                # cd into previous directory
 zi                 # toggle interactive selection (using fzf)
 ```
 
----
-## Ripgrep
+## :crystal_ball: Ripgrep
 [ripgrep](https://github.com/BurntSushi/ripgrep.git) is a line-oriented search tool that recursively searches the current directory for a regex pattern.
 By default, ripgrep will respect gitignore rules and automatically skip hidden files/directories and binary files.
 
@@ -78,9 +76,7 @@ rg lol README.md                # looks for pattern 'lol' in file README.md
 rg '[A-Za-z]{30}' README.md     # looks for regex '[A-Za-z]{30}' in file README.md
 
 ```
-
----
-## Fzf
+## :mag_right: Fzf
 General-purpose command-line fuzzy finder. It's an interactive **filter program** for any kind of list; files, command history, processes, hostnames, bookmarks, git commits, etc.
 It implements a "fuzzy" matching algorithm, so you can quickly type in patterns with omitted characters and still get the results you want.
 
