@@ -18,7 +18,7 @@ More information about `ssh` and all its commands can be found [here](https://ww
 - [Access/setup](#access-and-setup)
     * [Password authentication](#password-authentication)
     * [Key-based authentication](#key-based-authentication)
-- [Configuraiton](#configuration)
+- [Configuration](#configuration)
 
 
 

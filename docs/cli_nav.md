@@ -4,7 +4,7 @@ Useful tools to navigate and interact with the filesystem through command line.
 1. [tree](#deciduous_tree-tree)
 2. [zoxide](#rabbit-zoxide)
 3. [ripgrep](#crystal_ball-ripgrep)
-3. [fzf](#mag_right-fzf)
+4. [fzf](#mag_right-fzf)
 
 ---
 
