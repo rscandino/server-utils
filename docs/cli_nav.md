@@ -6,6 +6,8 @@ Useful tools to navigate and interact with the filesystem through command line.
 3. [ripgrep](#crystal_ball-ripgrep)
 3. [fzf](#mag_right-fzf)
 
+---
+
 ## :deciduous_tree: Tree
 The package `tree` provides a visual representation of a directory's contents in a tree-like format.
 It's a powerful tool for quickly understanding the organization of files and subdirectories.

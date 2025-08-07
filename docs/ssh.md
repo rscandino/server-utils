@@ -1,11 +1,4 @@
 # :closed_lock_with_key: SSH - Secure SHell
-
-- [Access/setup](#access-and-setup)
-    * [Password authentication](#password-authentication)
-    * [Key-based authentication](#key-based-authentication)
-- [Configuraiton](#configuration)
-
-
 `ssh` is a cryptographic network protocol used to securely operate network services, in particular for secure remote login and command-line execution,
 providing an encrypted channel between a client and a server. 
 This protects against eavesdropping, interception, and other attacks.
@@ -20,8 +13,17 @@ ssh
 ```
 More information about `ssh` and all its commands can be found [here](https://www.ssh.com/academy/ssh/command).
 
+### Sections
+
+- [Access/setup](#access-and-setup)
+    * [Password authentication](#password-authentication)
+    * [Key-based authentication](#key-based-authentication)
+- [Configuraiton](#configuration)
+
+
 
 ---
+
 ## Access and Setup
 Two main way of authenticate exists when using ssh:
 
