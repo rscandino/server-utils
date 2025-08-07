@@ -6,6 +6,7 @@
 - [Screen](#screen)
 - [Tmux](#tmux)
 
+---
 ## What is a Multiplexer?
 
 A multiplexer, like `screen` or `tmux`, is a tool that allows you to manage **multiple terminal sessions** from a single window. 
@@ -38,16 +39,9 @@ To quit a session from inside just hit `Ctrl+d`.
 ### Good practices
 Multiplexers are persistent and they can become a mess if forgotten, good practices should be followed in order to avoid that!
 
-#### Always use a named session
-It's much easier to **remember and re-attach** to a session named web-server than to one named 12345.pts-0.server.
-
-#### Remember to end sessions
-When you are done with a session remember to end it in order not to leave heavy sessions constantly running in the background.
-Try at least to check regurarly if you have open sessions left.
-
-#### Know your tool (keymaps/commands)
-Learn the prefix key, and at least how to retrieve the other available commands, these tools are extremely useful!
-e.g. Renaming windows (`[Prefix]+,` in `tmux`), jump between windows, jump between sessions.
+- **Always use a named session**: It's much easier to **remember and re-attach** to a session named web-server than to one named 12345.pts-0.server.
+- **Remember to end sessions**: When you are done with a session remember to end it in order not to leave heavy sessions constantly running in the background. Try at least to check regurarly if you have open sessions left.
+- **Know your tool (keymaps/commands)**: Learn the prefix key, and at least how to retrieve the other available commands, these tools are extremely useful! e.g. Renaming windows (`[Prefix]+,` in `tmux`), jump between windows, jump between sessions.
 
 
 ## Screen
