@@ -1,10 +1,10 @@
 # :rocket: File System Navigation Tools
 Useful tools to navigate and interact with the filesystem through command line.
 
-1. [tree](## :deciduous_tree: Tree)
-2. [zoxide](## :rabbit: Zoxide)
-3. [ripgrep](## :crystal_ball: Ripgrep)
-3. [fzf](## :mag_right: Fzf)
+1. [tree](##Tree)
+2. [zoxide](##Zoxide)
+3. [ripgrep](##Ripgrep)
+4. [fzf](##Fzf)
 
 ## :deciduous_tree: Tree
 The package `tree` provides a visual representation of a directory's contents in a tree-like format.
