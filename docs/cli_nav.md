@@ -93,6 +93,10 @@ vim $(fzf)                  # Open selection of fzf (as a bash variable) into 'v
 
 It can also be matched with tmux and its configuration and many other tools, check directly the [repo](https://github.com/junegunn/fzf.git).
 
+### Configuration
+Add the following line to your `~/.bashrc`. This enables cool stuff like fuzzy find your history with `Ctrl+r`.
+eval "$(fzf --bash)"
+
 ### Fuzzy completition for bash (Simplest usage!)
 `fzf` is be included by default for **autocomplete** using the command `**` followd by pressing `<TAB>` key:
 
@@ -102,22 +106,12 @@ vim Documents/**<TAB>           # fuzzy autocomplete inside Documents dir
 cd **<TAB>                      # Another example of fuzzy autocomplete
 ```
 
-### Customize command
+### Customize commands
 `fzf` has different flags that can be used to customize its usage, for example:
 
 ```shell
 ls | fzf --preview "cat {}"                              # display preview of the selection using 'cat'
 ls | fzf --preview "batcat -n --color=always {}"         # display preview of the selection using 'bat' and colors
-```
-
-You can also assign these specific extensions of fzf to keybinds such as `ctrl-t`:
-
-```shell
-# Preview file content using bat (https://github.com/sharkdp/bat)
-export FZF_CTRL_T_OPTS="
-  --walker-skip .git,node_modules,target
-  --preview 'bat -n --color=always {}'
-  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 ```
 
 All customizations can be made permanent by setting export variables into your `~/.bashrc` file. Check the [repo](https://github.com/junegunn/fzf.git) for more.
