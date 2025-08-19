@@ -42,7 +42,7 @@ tree -h                     # displays file size (human readable) of current dir
 To fully work `zoxide` should be initialized in your `~/.bashrc`. Just add the following line:
 
 ```shell
- # Set up zoxide key bindings
+ # Set up zoxide if it exists
 which zoxide &> /dev/null;
 if [ $? -eq 0 ]; then
   eval "$(zoxide init bash)"
@@ -104,7 +104,14 @@ It can also be matched with tmux and its configuration and many other tools, che
 
 ### Configuration
 Add the following line to your `~/.bashrc`. This enables cool stuff like fuzzy find your history with `Ctrl+r`.
-eval "$(fzf --bash)"
+
+```shell
+ # Set up fzf if it exists
+which fzf &> /dev/null;
+if [ $? -eq 0 ]; then
+    eval "$(fzf --bash)"
+fi
+```
 
 ### Fuzzy completition for bash (Simplest usage!)
 `fzf` is be included by default for **autocomplete** using the command `**` followd by pressing `<TAB>` key:
