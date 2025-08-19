@@ -73,9 +73,4 @@ set -g mouse on                   # mouse mode on
 set-option -g allow-rename off    # stop renaming windows (otherwise tmux continously renames windows)
 set -g default-terminal "${TERM}" # terminal created by tmux has the same capabilities and features (like color support) as the terminal you are using to launch it
 
-# [[ Custom Keymaps ]]
-bind -n M-h select-pane -L        # use Alt-h without prefix to switch panes
-bind -n M-l select-pane -R        # use Alt-l without prefix to swith panes
-bind -n M-k select-pane -U        # use Alt-k without prefix to swith panes
-bind -n M-j select-pane -D        # use Alt-j without prefix to swith panes
 ```

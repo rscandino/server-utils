@@ -42,8 +42,17 @@ tree -h                     # displays file size (human readable) of current dir
 To fully work `zoxide` should be initialized in your `~/.bashrc`. Just add the following line:
 
 ```shell
-eval "$(zoxide init bash)"
+ # Set up zoxide key bindings
+which zoxide &> /dev/null;
+if [ $? -eq 0 ]; then
+  eval "$(zoxide init bash)"
+fi
 ```
+
+>[!Note]
+> You can assign zoxide keybind to another command (like `cd`) by adding the line `--cmd <your new command>` without specifying aliases.
+> e.g. `eval "$(zoxide init bash --cmd cd)"`, this is activate zoxide using the command cd instead of the default z.
+
 
 Remeber to `source ~/.bashrc` after.
 
